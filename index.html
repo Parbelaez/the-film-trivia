@@ -9,32 +9,37 @@
 <body>
     <header>
         <div id="logo">
-            <i class="fa-solid fa-clapperboard"></i>
-            <h1>The Film Trivia</h1>
-            <h5>by Paulo Arbeláez</h5>
+            <i class="fa-solid fa-clapperboard" id="game-icon"></i>
+            <div id="game-name">
+                <h1>The Film Trivia</h1>
+                <h5>by Paulo Arbeláez</h5>
+            </div>
         </div>
     </header>
     <section id="game-field">
-        <div>
+        <div id="game-selection">
             <button data-type="director">Director</button>
             <button data-type="actor">Actor / Actress</button>
             <button data-type="release">Year of Release</button>
         </div>
+
         <div id="game-images">
-            <img src="" alt="film-poster" class="film-poster">
-            <div id="alternatives">
-                <img src="" alt="alternative-1" class="alternatives" id="alternative-1">
-                <img src="" alt="alternative-2" class="alternatives" id="alternative-2">
-                <img src="" alt="alternative-3" class="alternatives" id="alternative-3">
-                <img src="" alt="alternative-4" class="alternatives" id="alternative-4">
+            <img src="#" alt="film-poster" class="film-poster">
+            <div id="alternatives-grid">
+                <img src="#" alt="alternative-1" class="alternatives" id="alternative-1">
+                <img src="#" alt="alternative-2" class="alternatives" id="alternative-2">
+                <img src="#" alt="alternative-3" class="alternatives" id="alternative-3">
+                <img src="#" alt="alternative-4" class="alternatives" id="alternative-4">
             </div>
-        </div>
-        
-        <div id="game-score">
-            <h3>Game Score</h3>
-            <p>Guessed Directors: <span>0</span> / <span>0</span></p>
-            <p>Guessed Actors: <span>0</span> / <span>0</span></p>
-            <p>Guessed Release Year: <span>0</span> / <span>0</span></p>
+            <div id="game-score">
+                <h3>Game Score</h3>
+                <br>
+                <p>Guessed Directors: <span class="correct">0</span> / <span class="total">0</span></p>
+                <br>
+                <p>Guessed Actors: <span class="correct">0</span> / <span class="total">0</span></p>
+                <br>
+                <p>Guessed Release Year: <span class="correct">0</span> / <span class="total">0</span></p>
+            </div>
         </div>
     </section>
         
