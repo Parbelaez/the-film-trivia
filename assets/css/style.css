@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;@500&display=swap');
 
 * {
     margin: 0;
@@ -10,4 +10,75 @@ body {
     font-family: Quicksand, sans-serif;
     font-weight: 300;
     color: #3a3a3a;
+    margin: 5%;
+    border-color: grey;
+    border-style:double;
+    border-width: 10px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 2vh;
+}
+
+#logo {
+    display: flex;
+    gap: 1%;
+}
+
+#icon {
+    font-size: xx-large;
+}
+
+#game-selection {
+    padding: 1vh 1vw;
+    margin: 0 auto;
+}
+
+.film-poster {
+    max-height: 50vh;
+}
+
+.alternatives {
+    max-width: 20vw;
+    max-height: 25vh;
+}
+
+#alternatives-grid {
+    display: grid;
+    grid-template-columns: 16vw 16vw;
+    grid-template-rows: 26vh 26vh;
+    gap: 1%;
+    width: fit-content;
+    height: fit-content;
+}
+
+#game-images {
+    display: flex;
+    gap: 2%;
+    justify-content: space-between;
+    padding: 1%;
+    
+}
+
+#game-score {
+    margin-right: 20px;
+    margin-top: 10%;
+}
+
+#game-score.h3 {
+    font-weight: 500;
+}
+
+.correct {
+    color: green;
+    font-weight: 500;
+}
+
+.total {
+    font-weight: 500;
+}
+
+footer {
+    align-self:flex-end;
 }

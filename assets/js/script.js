@@ -86,6 +86,7 @@ function runGame(gameType){
         alert(`Unknown game type: ${gameType}`);
         throw `Unknown game type: ${gameType}. Aborting!`;
     }
+    checkAnswer()
 
 }
 
@@ -94,28 +95,74 @@ function displayImages(gameType, filmNmbr){
     let moviePoster = '"./assets/images/00'+filmNmbr+'_movie.jpg"';
     document.getElementsByClassName("film-poster")[0].src = "./assets/images/00"+filmNmbr+"_movie.jpg";
     if (gameType === "director"){
-        document.getElementById("alternative-1").src = "./assets/images/00"+filmNmbr+"_director.jpg";   
-        let images = [filmNmbr]
-        for (i = 2; i < 5; i++) {
-            let remainingImages = Math.floor(Math.random() * films.length);
-            while(images.includes(remainingImages)){
-                remainingImages = Math.floor(Math.random() * films.length);
+        //document.getElementById("alternative-1").src = "./assets/images/00"+filmNmbr+"_director.jpg";   
+        let images = [filmNmbr];
+        let positions = [];
+
+        //This loop will choose the remaining 3 images from the films database
+        for (i = 0; i < 3; i++) {
+            let image = Math.floor(Math.random() * films.length);
+            while(images.includes(image)){
+                image = Math.floor(Math.random() * films.length);
             }
-            document.getElementById("alternative-"+i).src = "./assets/images/00"+remainingImages+"_director.jpg";
-            images.push(remainingImages);
+            images.push(image);
+        }
+        console.log(images);
+        for (i = 0 ; i < 4 ; i++) {
+            let position = Math.floor(Math.random() * 4)+1;
+            while(positions.includes(position)){
+                position = Math.floor(Math.random() * 4)+1;
+            }
+            positions.push(position);
+            document.getElementById("alternative-"+position).src = "./assets/images/00"+images[i]+"_director.jpg";
+            console.log(position, i, document.getElementById("alternative-"+position).src);
         }
     } else if (gameType === "actor"){
-        document.getElementById("alternative-1").src = "./assets/images/00"+filmNmbr+"_actor.jpg";   
-        let images = [filmNmbr]
-        for (i = 2; i < 5; i++) {
-            let remainingImages = Math.floor(Math.random() * films.length);
-            while(images.includes(remainingImages)){
-                remainingImages = Math.floor(Math.random() * films.length);
+        //document.getElementById("alternative-1").src = "./assets/images/00"+filmNmbr+"_director.jpg";   
+        let images = [filmNmbr];
+        let positions = [];
+
+        //This loop will choose the remaining 3 images from the films database
+        for (i = 0; i < 3; i++) {
+            let image = Math.floor(Math.random() * films.length);
+            while(images.includes(image)){
+                image = Math.floor(Math.random() * films.length);
             }
-            document.getElementById("alternative-"+i).src = "./assets/images/00"+remainingImages+"_actor.jpg";
-            images.push(remainingImages);
+            images.push(image);
+        }
+        console.log(images);
+        for (i = 0 ; i < 4 ; i++) {
+            let position = Math.floor(Math.random() * 4)+1;
+            while(positions.includes(position)){
+                position = Math.floor(Math.random() * 4)+1;
+            }
+            positions.push(position);
+            document.getElementById("alternative-"+position).src = "./assets/images/00"+images[i]+"_actor.jpg";
+            console.log(position, i, document.getElementById("alternative-"+position).src);
         }
     }
+
+
+    //     for (i = 1; i < 5; i++) {
+    //         let remainingImages = Math.floor(Math.random() * films.length);
+    //         while(images.includes(remainingImages)){
+    //             remainingImages = Math.floor(Math.random() * films.length);
+    //         }
+    //         document.getElementById("alternative-"+i).src = "./assets/images/00"+remainingImages+"_director.jpg";
+    //         images.push(remainingImages);
+    //     }
+    // } else if (gameType === "actor"){
+    //     document.getElementById("alternative-1").src = "./assets/images/00"+filmNmbr+"_actor.jpg";   
+    //     let images = [filmNmbr]
+    //     for (i = 2; i < 5; i++) {
+    //         let remainingImages = Math.floor(Math.random() * films.length);
+    //         while(images.includes(remainingImages)){
+    //             remainingImages = Math.floor(Math.random() * films.length);
+    //         }
+    //         document.getElementById("alternative-"+i).src = "./assets/images/00"+remainingImages+"_actor.jpg";
+    //         images.push(remainingImages);
+    //     }
+    //}
 }
 
 function checkAnswer(){
