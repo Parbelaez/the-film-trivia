@@ -4,6 +4,15 @@
 
 let films = [
     {
+        "name": "Star Wars: A New Hope",
+        "movieImg": "000_movie.jpg",
+        "director": "George Lucas",
+        "directorImg": "000_director.jpg",
+        "actor": "Mark Hamill",
+        "actorImg": "000_actor.jpg",
+        "releaseYear": 1977,
+    },
+    {
         "name": "E.T.",
         "movieImg": "001_movie.jpg",
         "director": "Steven Spielberg",
@@ -81,11 +90,31 @@ function runGame(gameType){
 }
 
 function displayImages(gameType, filmNmbr){
+    let film = films[filmNmbr];
+    let moviePoster = '"./assets/images/00'+filmNmbr+'_movie.jpg"';
+    document.getElementsByClassName("film-poster")[0].src = "./assets/images/00"+filmNmbr+"_movie.jpg";
     if (gameType === "director"){
-            let film = films[filmNmbr];
-            console.log(film);
-            document.getElementsByClassName("film-poster").src = "./assets/images/00"+filmNmbr+"_director.jpg";
-            console.log("./assets/images/00"+filmNmbr+"_director.jpg");
+        document.getElementById("alternative-1").src = "./assets/images/00"+filmNmbr+"_director.jpg";   
+        let images = [filmNmbr]
+        for (i = 2; i < 5; i++) {
+            let remainingImages = Math.floor(Math.random() * films.length);
+            while(images.includes(remainingImages)){
+                remainingImages = Math.floor(Math.random() * films.length);
+            }
+            document.getElementById("alternative-"+i).src = "./assets/images/00"+remainingImages+"_director.jpg";
+            images.push(remainingImages);
+        }
+    } else if (gameType === "actor"){
+        document.getElementById("alternative-1").src = "./assets/images/00"+filmNmbr+"_actor.jpg";   
+        let images = [filmNmbr]
+        for (i = 2; i < 5; i++) {
+            let remainingImages = Math.floor(Math.random() * films.length);
+            while(images.includes(remainingImages)){
+                remainingImages = Math.floor(Math.random() * films.length);
+            }
+            document.getElementById("alternative-"+i).src = "./assets/images/00"+remainingImages+"_actor.jpg";
+            images.push(remainingImages);
+        }
     }
 }
 
