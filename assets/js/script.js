@@ -60,8 +60,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     for (let button of buttons) {
         button.addEventListener("click", function () {
-            if (this.getAttribute("data-type") == "submit") {
-                checkAnswer();
+            if (this.getAttribute("data-type") == "option") {
+                optionChoice = this.firstChild.getAttribute("src");
+                checkAnswer(filmNmbr, gameType,optionChoice);
             } else {
                 let gameType = this.getAttribute("data-type");
                 runGame(gameType);
@@ -79,14 +80,13 @@ document.addEventListener("DOMContentLoaded", function () {
 function runGame(gameType){
     //Creates one random number between 0 and films.length, so the film is chosen
     let filmNmbr = Math.floor(Math.random() * films.length);
-    console.log(filmNmbr, gameType);
     if(gameType === "director" || gameType === "actor" || gameType === "release") {
         displayImages(gameType, filmNmbr);
     } else {
         alert(`Unknown game type: ${gameType}`);
         throw `Unknown game type: ${gameType}. Aborting!`;
     }
-    checkAnswer()
+    return(filmNmbr, gameType)
 
 }
 
@@ -141,31 +141,10 @@ function displayImages(gameType, filmNmbr){
             console.log(position, i, document.getElementById("alternative-"+position).src);
         }
     }
-
-
-    //     for (i = 1; i < 5; i++) {
-    //         let remainingImages = Math.floor(Math.random() * films.length);
-    //         while(images.includes(remainingImages)){
-    //             remainingImages = Math.floor(Math.random() * films.length);
-    //         }
-    //         document.getElementById("alternative-"+i).src = "./assets/images/00"+remainingImages+"_director.jpg";
-    //         images.push(remainingImages);
-    //     }
-    // } else if (gameType === "actor"){
-    //     document.getElementById("alternative-1").src = "./assets/images/00"+filmNmbr+"_actor.jpg";   
-    //     let images = [filmNmbr]
-    //     for (i = 2; i < 5; i++) {
-    //         let remainingImages = Math.floor(Math.random() * films.length);
-    //         while(images.includes(remainingImages)){
-    //             remainingImages = Math.floor(Math.random() * films.length);
-    //         }
-    //         document.getElementById("alternative-"+i).src = "./assets/images/00"+remainingImages+"_actor.jpg";
-    //         images.push(remainingImages);
-    //     }
-    //}
 }
 
-function checkAnswer(){
+function checkAnswer(optionChoice){
+
 
 }
 
