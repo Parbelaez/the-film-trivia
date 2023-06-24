@@ -57,19 +57,18 @@ let films = [
 console.log("Entering program");
 document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByTagName("button");
-
     for (let button of buttons) {
         button.addEventListener("click", function () {
+            console.log(this.getAttribute("data-type"));
             if (this.getAttribute("data-type") == "option") {
                 optionChoice = this.firstChild.getAttribute("src");
-                checkAnswer(filmNmbr, gameType,optionChoice);
+                checkAnswer(optionChoice);
             } else {
                 let gameType = this.getAttribute("data-type");
                 runGame(gameType);
             }
         });
     }
-
     runGame("director");
 });
 
@@ -78,8 +77,9 @@ document.addEventListener("DOMContentLoaded", function () {
  */
 
 function runGame(gameType){
-    //Creates one random number between 0 and films.length, so the film is chosen
+    //Creates one random number between 0 and the number of films in the db
     let filmNmbr = Math.floor(Math.random() * films.length);
+    //Program control... the else should never run
     if(gameType === "director" || gameType === "actor" || gameType === "release") {
         displayImages(gameType, filmNmbr);
     } else {
@@ -90,6 +90,12 @@ function runGame(gameType){
 
 }
 
+
+/**
+ * 
+ * @param {string} gameType what game is being played: director, actor/actress, or release date
+ * @param {int} filmNmbr the index of the film object, so the algorithm finds the correspondent images
+ */
 function displayImages(gameType, filmNmbr){
     let film = films[filmNmbr];
     let moviePoster = '"./assets/images/00'+filmNmbr+'_movie.jpg"';
@@ -107,7 +113,7 @@ function displayImages(gameType, filmNmbr){
             }
             images.push(image);
         }
-        console.log(images);
+        //This loop will place the images in random order
         for (i = 0 ; i < 4 ; i++) {
             let position = Math.floor(Math.random() * 4)+1;
             while(positions.includes(position)){
@@ -115,10 +121,8 @@ function displayImages(gameType, filmNmbr){
             }
             positions.push(position);
             document.getElementById("alternative-"+position).src = "./assets/images/00"+images[i]+"_director.jpg";
-            console.log(position, i, document.getElementById("alternative-"+position).src);
         }
     } else if (gameType === "actor"){
-        //document.getElementById("alternative-1").src = "./assets/images/00"+filmNmbr+"_director.jpg";   
         let images = [filmNmbr];
         let positions = [];
 
@@ -130,7 +134,7 @@ function displayImages(gameType, filmNmbr){
             }
             images.push(image);
         }
-        console.log(images);
+        //This loop will place the images in random order
         for (i = 0 ; i < 4 ; i++) {
             let position = Math.floor(Math.random() * 4)+1;
             while(positions.includes(position)){
@@ -138,14 +142,35 @@ function displayImages(gameType, filmNmbr){
             }
             positions.push(position);
             document.getElementById("alternative-"+position).src = "./assets/images/00"+images[i]+"_actor.jpg";
-            console.log(position, i, document.getElementById("alternative-"+position).src);
         }
     }
 }
 
+/**
+ * 
+ * Checks if the chosen picture is part of the object of the poster
+ * @param {string} optionChoice the src attribute of the chosen picture
+ */
+
 function checkAnswer(optionChoice){
-
-
+    let poster = document.getElementsByClassName("film-poster")[0].src;
+    let movieIndex = parseInt(poster.split("_")[0].slice(-3));
+    let gameCategory = optionChoice.split("_")[1];
+    let imgFile = optionChoice.split("/")[3];
+    console.log(poster, movieIndex, gameCategory);
+    console.log(films[movieIndex].directorImg, imgFile);
+    if (gameCategory === "director.jpg"){
+        if (films[movieIndex].directorImg === imgFile){
+            alert(`Correct! The name of the movie is ${films[movieIndex].name} and the director was ${films[movieIndex].director}.`);
+            incrementScore();
+        } else {alert("Sorry, you chose the wrong director :-(");}
+    } else
+        if (gameCategory === "actor.jpg"){
+            if (films[movieIndex].actorImg === imgFile){
+                alert(`Correct! The name of the movie is ${films[movieIndex].name} and the actor/actress was ${films[movieIndex].actor}.`);
+                incrementScore();
+            } else {alert("Sorry, you chose the wrong actor/actress :-(");}
+        }
 }
 
 function incrementScore(){
