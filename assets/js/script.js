@@ -54,7 +54,6 @@ let films = [
  * The event listeners for the buttons to choose the game category.
  * Director will be the default game.
  */
-console.log("Entering program");
 document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByTagName("button");
     for (let button of buttons) {
@@ -155,24 +154,61 @@ function displayImages(gameType, filmNmbr){
 function checkAnswer(optionChoice){
     let poster = document.getElementsByClassName("film-poster")[0].src;
     let movieIndex = parseInt(poster.split("_")[0].slice(-3));
-    let gameCategory = optionChoice.split("_")[1];
+    let gameCategory = optionChoice.split("_")[1]; //wipe the .jpg off!!!!!!!!!!!!!!!!!!!!!!!
     let imgFile = optionChoice.split("/")[3];
-    console.log(poster, movieIndex, gameCategory);
-    console.log(films[movieIndex].directorImg, imgFile);
     if (gameCategory === "director.jpg"){
         if (films[movieIndex].directorImg === imgFile){
-            alert(`Correct! The name of the movie is ${films[movieIndex].name} and the director was ${films[movieIndex].director}.`);
-            incrementScore();
-        } else {alert("Sorry, you chose the wrong director :-(");}
+            incrementDirector();
+            incrementScoreDir();
+            //Using custom alerts from sweet alert
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Correct!',
+                html: `The name of the movie is ${films[movieIndex].name} and the director was ${films[movieIndex].director}.`,
+                showConfirmButton: true,
+                //timer: 1500
+              });
+            runGame("director");
+        } else {
+            alert("Sorry, you chose the wrong director :-(");
+            incrementDirector();
+            runGame("director");
+        }
     } else
         if (gameCategory === "actor.jpg"){
             if (films[movieIndex].actorImg === imgFile){
-                alert(`Correct! The name of the movie is ${films[movieIndex].name} and the actor/actress was ${films[movieIndex].actor}.`);
-                incrementScore();
-            } else {alert("Sorry, you chose the wrong actor/actress :-(");}
+                //Using custom alerts from sweet alert
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Correct!',
+                    html: `The name of the movie is ${films[movieIndex].name} and the actor/actress was ${films[movieIndex].actor}.`,
+                    showConfirmButton: true,
+                    //timer: 1500
+                  });
+                incrementActor();
+                incrementScoreACt();
+            } else {
+                alert("Sorry, you chose the wrong actor/actress :-(");
+                incrementActor();
+                runGame("actor");
+            }
         }
 }
 
-function incrementScore(){
+function incrementScoreDir(){
+    let oldDirScore = parseInt(document.getElementById("dir-correct").innerText);
+    document.getElementById("dir-correct").innerText = oldDirScore + 1;
+}
 
+function incrementDirector() {
+    let oldDir = parseInt(document.getElementById("dir-total").innerText);
+    document.getElementById("dir-total").innerText = oldDir+1;
+    console.log(document.getElementById("dir-total").innerText);
+}
+
+function incrementActor() {
+    document.getElementById("act-correct").innerText = ++parseInt(document.getElementById("act-correct").innerText);
+    document.getElementById("act-total").innerText = ++parseInt(document.getElementById("act-total").innerText);
 }
