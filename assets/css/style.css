@@ -61,6 +61,16 @@ body {
     
 }
 
+.option:hover {
+    border: 2px solid black;
+    cursor:grab;
+}
+
+.option:active {
+    border: 4px solid black;
+    cursor:grab;
+}
+
 #game-score {
     margin-right: 20px;
     margin-top: 10%;
