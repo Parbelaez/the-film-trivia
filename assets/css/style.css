@@ -58,7 +58,7 @@ h1 {
 }
 
 .film-poster {
-    max-height: 50vh;
+    max-height: 56vh;
 }
 
 .alternatives {
@@ -73,6 +73,9 @@ h1 {
     /* gap: 1%; */
     width: fit-content;
     height: fit-content;
+    background-color: hsl(14deg 74% 57% / 20%);
+    padding: 2%;
+    border-radius: 12px;
 }
 
 #game-images {
