@@ -58,10 +58,10 @@ document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByTagName("button");
     for (let button of buttons) {
         button.addEventListener("click", function () {
-            console.log(this.getAttribute("data-type"));
             if (this.getAttribute("data-type") == "option") {
+                fullImagerObject = this;
                 optionChoice = this.firstChild.getAttribute("src");
-                checkAnswer(optionChoice);
+                checkAnswer(optionChoice, fullImagerObject);
             } else {
                 let gameType = this.getAttribute("data-type");
                 runGame(gameType);
@@ -151,13 +151,15 @@ function displayImages(gameType, filmNmbr){
  * @param {string} optionChoice the src attribute of the chosen picture
  */
 
-function checkAnswer(optionChoice){
+function checkAnswer(optionChoice, fullImagerObject){
     let poster = document.getElementsByClassName("film-poster")[0].src;
     let movieIndex = parseInt(poster.split("_")[0].slice(-3));
     let gameCategory = optionChoice.split("_")[1]; //wipe the .jpg off!!!!!!!!!!!!!!!!!!!!!!!
     let imgFile = optionChoice.split("/")[3];
     if (gameCategory === "director.jpg"){
         if (films[movieIndex].directorImg === imgFile){
+            fullImagerObject.style.borderColor = "green";
+            fullImagerObject.style.borderWidth = "4px";
             incrementDirector();
             incrementScoreDir();
             //Using custom alerts from sweet alert
@@ -167,17 +169,25 @@ function checkAnswer(optionChoice){
                 title: 'Correct!',
                 html: `The name of the movie is ${films[movieIndex].name} and the director was ${films[movieIndex].director}.`,
                 showConfirmButton: true,
-                //timer: 1500
               });
             runGame("director");
         } else {
-            alert("Sorry, you chose the wrong director :-(");
+            Swal.fire({
+                title: 'Sorry!',
+                text: `The name of the movie is ${films[movieIndex].name} and the director was ${films[movieIndex].director}.`,
+                imageUrl: `./assets/images/${films[movieIndex].directorImg}`,
+                imageWidth: 150,
+                imageHeight: 200,
+                imageAlt: `${films[movieIndex].director}`,
+              });
             incrementDirector();
             runGame("director");
         }
     } else
         if (gameCategory === "actor.jpg"){
             if (films[movieIndex].actorImg === imgFile){
+                incrementActor();
+                incrementScoreAct();
                 //Using custom alerts from sweet alert
                 Swal.fire({
                     position: 'center',
@@ -187,10 +197,16 @@ function checkAnswer(optionChoice){
                     showConfirmButton: true,
                     //timer: 1500
                   });
-                incrementActor();
-                incrementScoreACt();
+                runGame("actor");
             } else {
-                alert("Sorry, you chose the wrong actor/actress :-(");
+                Swal.fire({
+                    title: 'Sorry!',
+                    text: `The name of the movie is ${films[movieIndex].name} and the actor/actress was ${films[movieIndex].actor}.`,
+                    imageUrl: `./assets/images/${films[movieIndex].actorImg}`,
+                    imageWidth: 150,
+                    imageHeight: 200,
+                    imageAlt: `${films[movieIndex].actor}`,
+                  });
                 incrementActor();
                 runGame("actor");
             }
@@ -205,10 +221,14 @@ function incrementScoreDir(){
 function incrementDirector() {
     let oldDir = parseInt(document.getElementById("dir-total").innerText);
     document.getElementById("dir-total").innerText = oldDir+1;
-    console.log(document.getElementById("dir-total").innerText);
+}
+
+function incrementScoreAct(){
+    let oldActScore = parseInt(document.getElementById("act-correct").innerText);
+    document.getElementById("act-correct").innerText = oldActScore + 1;
 }
 
 function incrementActor() {
-    document.getElementById("act-correct").innerText = ++parseInt(document.getElementById("act-correct").innerText);
-    document.getElementById("act-total").innerText = ++parseInt(document.getElementById("act-total").innerText);
+    let oldAct = parseInt(document.getElementById("act-total").innerText);
+    document.getElementById("act-total").innerText = oldAct+1;
 }
