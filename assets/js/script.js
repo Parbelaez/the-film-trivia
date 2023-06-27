@@ -193,7 +193,6 @@ function checkAnswer(optionChoice, fullImagerObject){
                     title: 'Correct!',
                     html: `The name of the movie is ${films[movieIndex].name} and the actor/actress was ${films[movieIndex].actor}.`,
                     showConfirmButton: true,
-                    //timer: 1500
                   });
                 runGame("actor");
             } else {
