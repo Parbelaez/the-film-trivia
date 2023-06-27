@@ -158,8 +158,6 @@ function checkAnswer(optionChoice, fullImagerObject){
     let imgFile = optionChoice.split("/")[3];
     if (gameCategory === "director.jpg"){
         if (films[movieIndex].directorImg === imgFile){
-            fullImagerObject.style.borderColor = "green";
-            fullImagerObject.style.borderWidth = "4px";
             incrementDirector();
             incrementScoreDir();
             //Using custom alerts from sweet alert
