@@ -39,7 +39,7 @@ header {
     border: solid;
     border-color: #E26740;
     border-radius: 0.5rem;
-    border-width: 2.5px;
+    border-width: 3.5px;
     justify-content: center;
 }
 
@@ -133,6 +133,7 @@ h1 {
 #game-score {
     margin-top: 10%;
     justify-self: end;
+    width: 17%;
 }
 
 #game-score.h3 {
@@ -140,8 +141,8 @@ h1 {
 }
 
 .correct {
-    color: green;
-    font-weight: 500;
+    color:#4DA8A2;
+    font-weight: bold;
 }
 
 .total {
