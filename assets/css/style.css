@@ -30,6 +30,11 @@ body {
 #logo {
     display: flex;
     gap: 1%;
+    padding: 1%;
+    order: solid;
+    border-color: #E26740;
+    border-radius: 0.5rem;
+    border-width: 2.5px;
 }
 
 #icon {
