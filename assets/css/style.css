@@ -53,12 +53,36 @@ h1 {
 }
 
 #game-selection {
+    display: flex;
     padding: 1vh 1vw;
+    gap: 5%;
     margin: 0 auto;
+    justify-content: center;
+}
+
+.games {
+    font-size: x-large;
+    color: #4DA8A2;
+    background-color: transparent;
+    border-color: #4DA8A2;
+    border-radius: 12px;
+    border-style: solid;
+    border-width: 4px;
+    padding: 1%;
+}
+
+.games:hover {
+    background-color: hsl(14deg 74% 57% / 20%);
+    cursor:pointer;
+    font-weight: bold;
 }
 
 .film-poster {
     max-height: 56vh;
+    border: solid  hsl(14deg 74% 57% / 20%) 4px;
+    padding: 1%;
+    border-radius: 12px;
+    box-sizing: border-box;
 }
 
 .alternatives {
