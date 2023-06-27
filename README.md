@@ -1,10 +1,19 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Welcome to my film trivia game,
 
-Welcome to my film trivia game,
+This is the second project for the full stack development course of Code Institute. It is a web-page that contains a film trivia game in which the user will need to match the picture of the director and/or the actor of the movie of the film on the left side of the page.
 
-This is the Code Institute student template for Codeanywhere. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![The Film Trivia Website shown on a range of devices](assets/images/bullybookclubwebsite.png)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **May 11th, 2023**
+For now, 10 films are included, but the database will be expanded overtime, as it has been crated in a way that could contain up to a thousand movies.
+
+[View The Film Trivia on Github Pages](https://parbelaez.github.io/the-film-trivia/)
+
+![GitHub last commit](https://img.shields.io/github/last-commit/Parbelaez/the-film-trivia?color=red)
+![GitHub contributors](https://img.shields.io/github/contributors/Parbelaez/the-film-trivia?color=orange)
+![GitHub language count](https://img.shields.io/github/languages/count/Parbelaez/the-film-trivia?color=yellow)
+![GitHub top language](https://img.shields.io/github/languages/top/Parbelaez/the-film-trivia?color=green)
+![W3C Validation](https://img.shields.io/w3c-validation/html?color=blueviolet&targetUrl=https%3A%2F%2Fparbelaez.github.io/the-film-trivia/
+)
 
 ## Codeanywhere Reminders
 

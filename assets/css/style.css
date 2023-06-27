@@ -78,6 +78,7 @@ h1 {
 }
 
 .film-poster {
+    max-width: fit-content;
     max-height: 57vh;
     border: solid  hsl(14deg 74% 57% / 20%) 4px;
     padding: 1%;
@@ -151,4 +152,14 @@ h1 {
 
 footer {
     align-self:flex-end;
+}
+
+/* media queries */
+
+@media screen and (max-width: 1250px) {
+
+    #game-images {
+        flex-direction: column;
+        place-items: center;
+    }
 }
