@@ -14,6 +14,13 @@ For now, 10 films are included, but the database will be expanded overtime, as i
 ![GitHub top language](https://img.shields.io/github/languages/top/Parbelaez/the-film-trivia?color=green)
 ![W3C Validation](https://img.shields.io/w3c-validation/html?color=blueviolet&targetUrl=https%3A%2F%2Fparbelaez.github.io/the-film-trivia/
 )
+<p>
+    <a href="https://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
+            alt="Valid CSS!" />
+    </a>
+</p>
 
 - - -
 
@@ -101,3 +108,4 @@ Google Dev Tools - To troubleshoot and test features, solve issues with responsi
 [Shields.io](https://shields.io/) To add badges to the README
 
 - - -
+     

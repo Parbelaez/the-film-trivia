@@ -150,7 +150,7 @@ function displayImages(gameType, filmNmbr){
         let positions = [];
 
         //This loop will choose the remaining 3 images from the films database
-        for (i = 0; i < 3; i++) {
+        for (let i = 0; i < 3; i++) {
             let image = Math.floor(Math.random() * films.length);
             while(images.includes(image)){
                 image = Math.floor(Math.random() * films.length);
@@ -158,7 +158,7 @@ function displayImages(gameType, filmNmbr){
             images.push(image);
         }
         //This loop will place the images in random order
-        for (i = 0 ; i < 4 ; i++) {
+        for (let i = 0 ; i < 4 ; i++) {
             let position = Math.floor(Math.random() * 4)+1;
             while(positions.includes(position)){
                 position = Math.floor(Math.random() * 4)+1;
@@ -171,7 +171,7 @@ function displayImages(gameType, filmNmbr){
         let positions = [];
 
         //This loop will choose the remaining 3 images from the films database
-        for (i = 0; i < 3; i++) {
+        for (let i = 0; i < 3; i++) {
             let image = Math.floor(Math.random() * films.length);
             while(images.includes(image)){
                 image = Math.floor(Math.random() * films.length);
@@ -179,7 +179,7 @@ function displayImages(gameType, filmNmbr){
             images.push(image);
         }
         //This loop will place the images in random order
-        for (i = 0 ; i < 4 ; i++) {
+        for (let i = 0 ; i < 4 ; i++) {
             let position = Math.floor(Math.random() * 4)+1;
             while(positions.includes(position)){
                 position = Math.floor(Math.random() * 4)+1;
