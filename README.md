@@ -2,7 +2,7 @@
 
 This is the second project for the full stack development course of Code Institute. It is a web-page that contains a film trivia game in which the user will need to match the picture of the director and/or the actor of the movie of the film on the left side of the page.
 
-![The Film Trivia Website shown on a range of devices](assets/images/bullybookclubwebsite.png)
+![The Film Trivia Website shown on a range of devices](./assets/images/Responsiveness.png)
 
 For now, 10 films are included, but the database will be expanded overtime, as it has been crated in a way that could contain up to a thousand movies.
 
