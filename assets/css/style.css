@@ -183,15 +183,24 @@ footer {
     .option{
         height: 19vh;
     }
+
+    #alternatives-grid {
+        margin: 3%;
+    }
+
 }
 
-@media screen and (max-width: 8000px) {
+@media screen and (max-width: 800px) {
 
-    .option{
+    #alternatives-grid{
         grid-template-columns: auto;
         grid-template-rows: auto;
         height: auto;
-        
+
+    }
+
+    .option {
+        width: 85%;
     }
 }
 
