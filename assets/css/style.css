@@ -29,6 +29,7 @@ body {
 
 header {
     width: 70%;
+    min-width: 70vw;
     align-self: center;
 }
 
@@ -132,9 +133,9 @@ h1 {
 }
 
 #game-score {
-    margin-top: 10%;
-    justify-self: end;
-    width: 17%;
+    align-self: center;
+    padding: 5% 0%;
+    min-width: 17%;
 }
 
 #game-score.h3 {
