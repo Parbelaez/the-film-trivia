@@ -1,12 +1,12 @@
 # Welcome to my film trivia game,
 
-This is the second project for the full stack development course of Code Institute. It is a web-page that contains a film trivia game in which the user will need to match the picture of the director and/or the actor of the movie of the film on the left side of the page.
+This is the second project for the full stack development course of Code Institute. It is a web page that contains a film trivia game in which the user will need to match the picture of the director and/or the actor of the movie of the film on the left side of the page.
 
-![The Film Trivia Website shown on a range of devices](./assets/images/Responsiveness.png)
+![The Film Trivia Website is shown on a range of devices](./assets/images/Responsiveness.png)
 
-For now, 10 films are included, but the database will be expanded overtime, as it has been crated in a way that could contain up to a thousand movies.
+For now, 10 films are included, but the database will be expanded over time, as it has been created in a way that could contain up to a thousand movies.
 
-[View The Film Trivia on Github Pages](https://parbelaez.github.io/the-film-trivia/)
+[View The Film Trivia on GitHub Pages](https://parbelaez.github.io/the-film-trivia/)
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/Parbelaez/the-film-trivia?color=red)
 ![GitHub contributors](https://img.shields.io/github/contributors/Parbelaez/the-film-trivia?color=orange)
@@ -23,6 +23,29 @@ For now, 10 films are included, but the database will be expanded overtime, as i
 </p>
 
 - - -
+
+## CONTENTS
+
+* [User Experience (UX)](#User-Experience-(UX))
+    * [Design Idea](#design-idea)
+    * [How to Play](#how-to-play)
+    * [Visual Concept](#visual-concept)
+    * [Typography](#typography)
+    * [Imagery](#imagery)
+    * [Accessibility](#accessibility)
+* [Technologies Used](#technologies-used)
+    * [Languages Used](#languages-used)
+    * [Frameworks, Libraries & Programs Used](#Frameworks,-Libraries-&-Programs-Used)
+* [Validation](#validation)
+* [Future Implementations](#Future-Implementations)
+
+
+
+
+
+
+
+---
 
 ## User Experience (UX)
 
@@ -43,25 +66,25 @@ There are two buttons to choose the kind of game the user would like to play: Di
 
 ![The Film Trivia Game Options](./assets/images/GameOptions.png)
 
-The Director option (default) has already been shown. The actor options is the one above, but this one has a particularity: it is not necessarily the main character of the movie. So, for example, in Die Haard, the user must guess for Bonnie Bedelia and not for Bruce Willis.
+The Director option (default) has already been shown. The actor's option is the one above, but this one has a particularity: it is not necessarily the main character of the movie. So, for example, in Die Hard, the user must guess Bonnie Bedelia and not Bruce Willis.
 
 ![The Film Trivia Actor / Actress](./assets/images/DieHard_actress.png)
 
 ### Visual Concept
 
-The color palette was influenced by the Wes Anderson' movies, and it was found at [Schemecolor](https://www.schemecolor.com/retro-hollywood.php)
+The color palette was influenced by Wes Anderson's movies, and it was found at [Schemecolor](https://www.schemecolor.com/retro-hollywood.php)
 
 ![The Film Trivia Color Palette](./assets/images/ColorPalette.png)
 
 ### Typography
 
-Google Fonts was used for the fontand its variations:
+Google Fonts was used for the font and its variations:
 
 * [Quicksand](https://fonts.google.com/share?selection.family=Quicksand:wght@300;500).
 
 ### Imagery
 
-All images werre taken from the Internet and the credits can be found here (https://parbelaez.github.io/the-film-trivia/credits.html).
+All images were taken from the Internet and the credits can be found here (https://parbelaez.github.io/the-film-trivia/credits.html).
 
 
 ### Accessibility
@@ -99,7 +122,7 @@ Google Fonts - To import the fonts used on the website.
 
 Font Awesome - For the iconography on the website.
 
-Google Dev Tools - To troubleshoot and test features, solve issues with responsiveness and styling.
+Google Dev Tools - To troubleshoot and test features, and solve issues with responsiveness and styling.
 
 [Favicon.io](https://favicon.io/) To create favicon.
 
@@ -108,4 +131,31 @@ Google Dev Tools - To troubleshoot and test features, solve issues with responsi
 [Shields.io](https://shields.io/) To add badges to the README
 
 - - -
-     
+
+## Validation
+
+HTML and CSS are validated with 100% pass scores.
+
+JavaScript was validated with JSHint and the warnings were all related to external libraries that were confused with variables by the algorithm and/or functions inside loops, as in the button events routine, which was based on the Love Math project.
+
+- - -
+
+## Future Implementations
+
+As mentioned, the list of films could grow (without adapting the code) to 1000 movies.
+
+Each film is an object of the ***"films"*** array.
+
+```
+    {
+        "name": "name_of_the_movie",
+        "movieImg": "xxx_movie.jpg",
+        "director": "name_of_the_director",
+        "directorImg": "xxx_director.jpg",
+        "actor": "name_of_the_actor/actress",
+        "actorImg": "xxx_actor.jpg",
+        "releaseYear": release_year,
+    }
+```
+
+

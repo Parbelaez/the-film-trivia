@@ -129,7 +129,7 @@ function runGame(gameType){
         alert(`Unknown game type: ${gameType}`);
         throw `Unknown game type: ${gameType}. Aborting!`;
     }
-    return(filmNmbr, gameType)
+    return(filmNmbr, gameType);
 
 }
 
