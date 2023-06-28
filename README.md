@@ -6,7 +6,7 @@ This is the second project for the full stack development course of Code Institu
 
 For now, 10 films are included, but the database will be expanded overtime, as it has been crated in a way that could contain up to a thousand movies.
 
-[View The Film Trivia on Github Pages](https://parbelaez.github.io/the-film-trivia/){:target="_blank" rel="noopener"}
+[View The Film Trivia on Github Pages](https://parbelaez.github.io/the-film-trivia/)
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/Parbelaez/the-film-trivia?color=red)
 ![GitHub contributors](https://img.shields.io/github/contributors/Parbelaez/the-film-trivia?color=orange)
@@ -15,34 +15,89 @@ For now, 10 films are included, but the database will be expanded overtime, as i
 ![W3C Validation](https://img.shields.io/w3c-validation/html?color=blueviolet&targetUrl=https%3A%2F%2Fparbelaez.github.io/the-film-trivia/
 )
 
-## Codeanywhere Reminders
+- - -
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+## User Experience (UX)
 
-`python3 -m http.server`
+### Design Idea
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+The idea behind the game is to match the Film Poster with the photo of the director or the actor/actress. No text was used for the guessing, as film is a completely visual experience. Therefore, only the names are revealed as soon as a selection is made.
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+### How to Play
 
-`http_server`
+By default, the game is set to guess the director of the film. Each movie will be represented by its poster, and 4 alternatives for the director will be displayed.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+![The Film Trivia Website Movie Poster](./assets/images/MoviePoster.png)
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+![The Film Trivia Website Directors](./assets/images/DirectorOptions.png)
 
-To log into the Heroku toolbelt CLI:
+There are two buttons to choose the kind of game the user would like to play: Director or Actor/Actress.
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+![The Film Trivia Game Options](./assets/images/GameOptions.png)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+The Director option (default) has already been shown. The actor options is the one above, but this one has a particularity: it is not necessarily the main character of the movie. So, for example, in Die Haard, the user must guess for Bonnie Bedelia and not for Bruce Willis.
 
----
+![The Film Trivia Actor / Actress](./assets/images/DieHard_actress.png)
 
-Happy coding!
+### Visual Concept
+
+The color palette was influenced by the Wes Anderson' movies, and it was found at [Schemecolor](https://www.schemecolor.com/retro-hollywood.php)
+
+![The Film Trivia Color Palette](./assets/images/ColorPalette.png)
+
+### Typography
+
+Google Fonts was used for the fontand its variations:
+
+* [Quicksand](https://fonts.google.com/share?selection.family=Quicksand:wght@300;500).
+
+### Imagery
+
+All images werre taken from the Internet and the credits can be found here (https://parbelaez.github.io/the-film-trivia/credits.html).
+
+
+### Accessibility
+
+The website is as accessible and friendly as possible, for users and possible future developers. I have achieved this by:
+
+* Simplicity, so the user knows graphically and intuitively what should be done.
+* Using semantic HTML.
+* Using descriptive alt attributes on images on the site.
+* Providing information for screen readers where there are icons used and no text.
+* Ensuring menus are accessible by marking the current page as current for screen readers.
+
+- - -
+
+## Technologies Used
+
+
+### Languages Used
+
+HTML and CSS were used to create this website's looks.
+All logic was created by using JavaScript.
+
+
+### Frameworks, Libraries & Programs Used
+
+Balsamiq - Used to create wireframes.
+
+![The Film Trivia Wireframe](./assets/images/Balsamiq.png)
+
+Git - For version control.
+
+Github - To save and store the files for the website.
+
+Google Fonts - To import the fonts used on the website.
+
+Font Awesome - For the iconography on the website.
+
+Google Dev Tools - To troubleshoot and test features, solve issues with responsiveness and styling.
+
+[Favicon.io](https://favicon.io/) To create favicon.
+
+[Am I Responsive?](http://ami.responsivedesign.is/) To show the website image on a range of devices.
+
+[Shields.io](https://shields.io/) To add badges to the README
+
+- - -
