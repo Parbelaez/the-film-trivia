@@ -179,6 +179,20 @@ footer {
     #game-images {
         flex-direction: column;
     }
+
+    .option{
+        height: 19vh;
+    }
+}
+
+@media screen and (max-width: 8000px) {
+
+    .option{
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        height: auto;
+        
+    }
 }
 
 @media screen and (max-width: 413px) {
