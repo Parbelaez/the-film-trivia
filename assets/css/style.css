@@ -85,23 +85,25 @@ h1 {
     padding: 1%;
     border-radius: 12px;
     box-sizing: border-box;
+    align-self: center;
 }
 
 .alternatives {
-    max-width: 20vw;
-    max-height: 25vh;
+    max-width: 100%;
+    max-height: 22vh;
 }
 
 #alternatives-grid {
     display: grid;
     grid-template-columns: 16vw 16vw;
-    grid-template-rows: 26vh 26vh;
+    /* grid-template-rows: 26vh 26vh; */
     /* gap: 1%; */
     width: fit-content;
     height: fit-content;
     background-color: hsl(14deg 74% 57% / 20%);
     padding: 2%;
     border-radius: 12px;
+    align-self: center;
 }
 
 #game-images {
@@ -109,13 +111,21 @@ h1 {
     gap: 2%;
     justify-content: space-between;
     padding: 1%;
+    flex-wrap: wrap;
     
 }
 
 .option {
-    display: flex;
-    width: fit-content;
+    /* display: flex; */
+    /* width: fit-content;
     height: fit-content;
+    background-color: transparent;
+    align-self: center;
+    justify-self: center;
+    padding: 1%; */
+
+    width: 15vw;
+    height: 24vh;
     background-color: transparent;
     align-self: center;
     justify-self: center;
@@ -157,10 +167,16 @@ footer {
 
 /* media queries */
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1300px) {
+
+    #game-images {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 950px) {
 
     #game-images {
         flex-direction: column;
-        place-items: center;
     }
 }
