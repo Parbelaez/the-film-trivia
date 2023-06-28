@@ -180,3 +180,17 @@ footer {
         flex-direction: column;
     }
 }
+
+@media screen and (max-width: 413px) {
+    #game-icon {
+        font-size: xx-large;
+    }
+
+    h1{
+        font-size: large;
+    }
+
+    .games {
+        font-size: large;
+    }
+}

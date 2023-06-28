@@ -6,7 +6,7 @@ This is the second project for the full stack development course of Code Institu
 
 For now, 10 films are included, but the database will be expanded overtime, as it has been crated in a way that could contain up to a thousand movies.
 
-[View The Film Trivia on Github Pages](https://parbelaez.github.io/the-film-trivia/)
+[View The Film Trivia on Github Pages](https://parbelaez.github.io/the-film-trivia/){:target="_blank" rel="noopener"}
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/Parbelaez/the-film-trivia?color=red)
 ![GitHub contributors](https://img.shields.io/github/contributors/Parbelaez/the-film-trivia?color=orange)
