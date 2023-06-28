@@ -140,10 +140,9 @@ function runGame(gameType){
  * @param {int} filmNmbr the index of the film object, so the algorithm finds the correspondent images
  */
 function displayImages(gameType, filmNmbr){
-    let moviePoster = '"./assets/images/00'+filmNmbr+'_movie.jpg"';
+    //let moviePoster = '"./assets/images/00'+filmNmbr+'_movie.jpg"';
     document.getElementsByClassName("film-poster")[0].src = "./assets/images/00"+filmNmbr+"_movie.jpg";
-    if (gameType === "director"){
-        //document.getElementById("alternative-1").src = "./assets/images/00"+filmNmbr+"_director.jpg";   
+    if (gameType === "director"){ 
         let images = [filmNmbr];
         let positions = [];
 
