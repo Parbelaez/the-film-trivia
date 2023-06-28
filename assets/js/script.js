@@ -104,9 +104,8 @@ document.addEventListener("DOMContentLoaded", function () {
     for (let button of buttons) {
         button.addEventListener("click", function () {
             if (this.getAttribute("data-type") == "option") {
-                fullImagerObject = this;
-                optionChoice = this.firstChild.getAttribute("src");
-                checkAnswer(optionChoice, fullImagerObject);
+                let optionChoice = this.firstChild.getAttribute("src");
+                checkAnswer(optionChoice);
             } else {
                 let gameType = this.getAttribute("data-type");
                 runGame(gameType);
@@ -141,7 +140,6 @@ function runGame(gameType){
  * @param {int} filmNmbr the index of the film object, so the algorithm finds the correspondent images
  */
 function displayImages(gameType, filmNmbr){
-    let film = films[filmNmbr];
     let moviePoster = '"./assets/images/00'+filmNmbr+'_movie.jpg"';
     document.getElementsByClassName("film-poster")[0].src = "./assets/images/00"+filmNmbr+"_movie.jpg";
     if (gameType === "director"){
@@ -196,7 +194,7 @@ function displayImages(gameType, filmNmbr){
  * @param {string} optionChoice the src attribute of the chosen picture
  */
 
-function checkAnswer(optionChoice, fullImagerObject){
+function checkAnswer(optionChoice){
     let poster = document.getElementsByClassName("film-poster")[0].src;
     let movieIndex = parseInt(poster.split("_")[0].slice(-3));
     let gameCategory = optionChoice.split("_")[1]; //wipe the .jpg off!!!!!!!!!!!!!!!!!!!!!!!
