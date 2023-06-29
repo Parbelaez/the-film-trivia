@@ -54,6 +54,8 @@ For now, 10 films are included, but the database will be expanded over time, as 
 
 The idea behind the game is to match the Film Poster with the photo of the director or the actor/actress. No text was used for the guessing, as film is a completely visual experience. Therefore, only the names are revealed as soon as a selection is made.
 
+*Part of the logic comes from code included in the Love Maths project of Code Institute.
+
 ### How to Play
 
 By default, the game is set to guess the director of the film. Each movie will be represented by its poster, and 4 alternatives for the director will be displayed.
