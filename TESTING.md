@@ -113,11 +113,11 @@ Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | Game Categories Buttons | Correctly switches between Director and Actor/Actress Games | Click Buttons |  Switches Category or displays a new film to guess | Pass |
 | Option Pictures Hover | Creates a border with padding for the hovered image | Hover | Creates the border | Pass |
 | Choose an option | Brings a custom alert message indicating if the selected image was the correct on. If not, it should display the correct one with the name of the film and the name of the director or actor/actress, depending on the game category | Click the options' pictures | Displays the expected alert and start a new game to guess on the same category as the previous one. | Pass |
-
+| --- | --- | --- | --- | --- |
 | `Home Page` |
 | Click the Paulo Arbeláez link | Redirect to Project 1 webpage | Click link | Redirected to the portfolio page opening a new tab | Pass |
 | Click on the Images Credits link  | Redirect to the credits page | Click the link | Redirected to the credits page | Pass |
-
+| --- | --- | --- | --- | --- |
 | `Images' Credits Page` |
 | Click the logo to get back to the game | Redirects to the game page | Click the logo | Redirected to the game page | Pass |
 | Click the links on the credits | Redirects to the credits page opening a new tab | Click the links on the credits | Redirects to the credits page opening a new tab | Pass |
