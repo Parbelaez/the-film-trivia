@@ -70,43 +70,20 @@ I used Lighthouse within the Chrome Developer Tools to test the performance, acc
 
 ### Desktop Results
 
-* Index Page
-  ![Index Page lighthouse testing desktop](documentation/lighthouse/index-lh-desk.png)
+* Game Page
+![Game Page lighthouse testing mobile](./assets/testing/lighthouse-desktop.png)
 
-* Login Page
-  ![Login Page Lighthouse testing desktop](documentation/lighthouse/login-lh-desk.png)
-  
-* Sign Up Page
-  ![Sign Up Page Lighthouse testing desktop](documentation/lighthouse/signup-lh-desk.png)
-  
-* All Threads Page
-  ![All threads page lighthouse testing desktop](documentation/lighthouse/allthreads-lh-desk.png)
-  
-* Privacy Policy Page
-  ![Privacy policy page lighthouse testing desktop](documentation/lighthouse/privacy-lh-desk.png)
-  
-* Terms and conditions Page
-  ![Terms and conditions page lighthouse testing desktop](documentation/lighthouse/terms-lh-desk.png)
+* Images' Credits Page
+![Login Page Lighthouse testing desktop](./assets/testing/credits-lighthouse-desktop.png)
 
 ### Mobile Results
 
-* Index Page
-  ![Index Page lighthouse testing mobile](documentation/lighthouse/index-lh-mobile.png)
+* Game Page
+![Game Page lighthouse testing mobile](./assets/testing/lighthouse-mobile.png)
 
-* Login Page
-  ![Login Page Lighthouse testing mobile](documentation/lighthouse/login-lh-mobile.png)
-  
-* Sign Up Page
-  ![Sign Up Page Lighthouse testing mobile](documentation/lighthouse/signup-lh-mobile.png)
-  
-* All Threads Page
-  ![All threads page lighthouse testing mobile](documentation/lighthouse/allthreads-lh-mobile.png)
-  
-* Privacy Policy Page
-  ![Privacy policy page lighthouse testing mobile](documentation/lighthouse/privacy-lh-mobile.png)
-  
-* Terms and conditions Page
-  ![Terms and conditions page lighthouse testing mobile](documentation/lighthouse/terms-lh-mobile.png)
+* Credits Page
+![Login Page Lighthouse testing mobile](./assets/testing/credits-lighthouse-mobile.png)
+
 
 - - -
 
