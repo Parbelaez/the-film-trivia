@@ -43,6 +43,8 @@ For now, 10 films are included, but the database will be expanded over time, as 
         * [How to Clone](#how-to-clone)
 * [Validation](#validation)
 * [Future Implementations](#Future-Implementations)
+* [Found Bugs](#found-bugs)
+* [Credits](#credits)
 
 ---
 
@@ -191,5 +193,16 @@ Each film is an object of the ***"films"*** array.
         "releaseYear": release_year,
     }
 ```
+---
 
+## Found Bugs
+
+- The favicon was not possible to be displayed until it was stored inside a folder ./assets/favicon/favicon.ico.
+
+---
+
+## Credits
+
+- **Jubril Akoldade** my tutor, who invested the time to check everything and recommended me all the best practices, plus useful tips to make the game and the webpage better.
+- All images' credits can be found in the images-credits.html and can be increased as new films get into the database.
 
