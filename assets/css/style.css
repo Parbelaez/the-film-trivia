@@ -116,14 +116,6 @@ h1 {
 }
 
 .option {
-    /* display: flex; */
-    /* width: fit-content;
-    height: fit-content;
-    background-color: transparent;
-    align-self: center;
-    justify-self: center;
-    padding: 1%; */
-
     width: 15vw;
     height: 24vh;
     background-color: transparent;
@@ -165,6 +157,16 @@ footer {
     align-self:flex-end;
 }
 
+/* Images Credits page */
+
+.credits-name {
+    font-weight: bold;
+}
+
+#credits-box {
+    padding: 2%;
+}
+
 /* media queries */
 
 @media screen and (max-width: 1300px) {
@@ -201,6 +203,10 @@ footer {
 
     .option {
         width: 85%;
+    }
+
+    #credits-box {
+        font-size: smaller;
     }
 }
 
